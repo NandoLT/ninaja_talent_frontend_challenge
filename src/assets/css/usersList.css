@@ -1,0 +1,8 @@
+.users-table table {
+    margin: auto;
+}
+
+.users-table .see_user_detail:hover {
+    color: #eb1212;
+    cursor: pointer;
+}
