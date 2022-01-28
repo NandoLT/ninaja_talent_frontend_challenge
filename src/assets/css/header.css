@@ -1,3 +1,18 @@
 .navbar {
     background-color: beige;
 }
+
+.navbar-item {
+    height: auto;
+    margin: auto;
+    max-width: 200px;
+}
+
+.navbar a.navbar-item:hover {
+    background-color: transparent;
+}
+
+.navbar-item img {
+    max-height: 3rem;
+    width: 200px;
+}
