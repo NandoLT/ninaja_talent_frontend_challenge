@@ -4,32 +4,33 @@ import { getUsers } from '../../services/api/users/usersData';
 import UsersList from './UsersList';
 import Loader from '../commons/Loader';
 
-const EmptyList = () => {
-    return (
-        <div style={{ textAlign: 'center' }}>
-            <p>Users List Empty !!!</p>
-        </div>
-    )
-}
+// const EmptyList = () => {
+//     return (
+//         <div style={{ textAlign: 'center' }}>
+//             <p>Users List Empty !!!</p>
+//         </div>
+//     )
+// }
 
 const  UsersPage = () => {
 
-    const initialState = [];
+    let initialState = [];
+    
     const [users, setUsers] = useState(initialState);
     const [error, setError] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
+        setIsLoading(true);
         getUsers()
-        .then(setUsers)
-        .catch( error => {
-            console.log(error);
-            setError(error);
-        })
-        .finally( () => {
-            setIsLoading(!isLoading);
-            }
-            );
+            .then(setUsers)
+            .catch( error => {
+                console.log(error);
+                setError(error);
+            })
+            .finally( () => {
+                setIsLoading(false);
+            });
     }, []);
 
     return (
@@ -40,9 +41,7 @@ const  UsersPage = () => {
                 isLoading ? 
                     <Loader />
                     :
-                        users.length ?
-                            <UsersList users={ users } /> :
-                            <EmptyList />
+                    <UsersList users={ users } /> 
             }
         </Layout>
     )
@@ -50,4 +49,9 @@ const  UsersPage = () => {
 
 export default UsersPage;
 
-        
+// isLoading ? 
+//                     <Loader />
+//                     :
+//                         users.length ?
+//                             <UsersList users={ users } /> :
+//                             <EmptyList />

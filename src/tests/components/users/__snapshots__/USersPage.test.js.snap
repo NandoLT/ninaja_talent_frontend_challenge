@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in <UsersPage /> Should display correctly 1`] = `
+<Layout>
+  <EmptyList />
+</Layout>
+`;
+
+exports[`Tests in <UsersPage /> should display a list of users 1`] = `
+<Layout>
+  <EmptyList />
+</Layout>
+`;
