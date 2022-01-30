@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import UserDetail from './UserDetail';
 import PropTypes from 'prop-types';
 
@@ -9,9 +9,13 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 import '../../assets/css/usersList.css';
 
 const UsersList= ({ users }) => {
-
     const [seeUserDetail, setSeeUserDetail] = useState(false);
     const [userDetail, setUserDetail] = useState({});
+
+
+    useEffect(() => {
+        console.log('USERS', users);
+    })
 
     const handleUserDetail = () => {
         setSeeUserDetail(!seeUserDetail);
@@ -30,7 +34,7 @@ const UsersList= ({ users }) => {
     }
 
     return (
-        {users.length ? 
+        users.length ? 
             <>
                 <div className="users-table">
                     <table className="table is-striped is-hoverable">
@@ -66,7 +70,6 @@ const UsersList= ({ users }) => {
             </>
             :
             <EmptyList />
-        }
     );
 }
 
