@@ -6,7 +6,7 @@ describe('Tests in <UsersPage />', () => {
 
     test('Should display correctly', () => {
 
-        const wrapper = shallow(<UsersPage isLoading={false} />);
+        const wrapper = shallow(<UsersPage />);
         expect(wrapper).toMatchSnapshot();
     });
 

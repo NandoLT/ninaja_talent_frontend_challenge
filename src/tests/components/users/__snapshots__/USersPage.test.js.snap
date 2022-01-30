@@ -2,12 +2,16 @@
 
 exports[`Tests in <UsersPage /> Should display correctly 1`] = `
 <Layout>
-  <EmptyList />
+  <UsersList
+    users={Array []}
+  />
 </Layout>
 `;
 
 exports[`Tests in <UsersPage /> should display a list of users 1`] = `
 <Layout>
-  <EmptyList />
+  <UsersList
+    users={Array []}
+  />
 </Layout>
 `;
