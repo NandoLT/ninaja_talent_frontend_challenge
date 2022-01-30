@@ -22,3 +22,6 @@ REQUERIMIENTOS:
         - USerPage: Sólo se testea que se muestra el componente como esperamos.
         - UsersList: se comprueba que el componente se renderiza mostrando la tabla de usuarios cuando el array de usuarios es mayor que 0. En caso de que no sea así vemos que mostrara el componente EmptyList.
         - UserDetail: Sólo se testea que se muestra el componente como esperamos.
+
+- Deploy: 
+    - Desplegada en vercel: https://ninja-talent-frontend-challenge.vercel.app/
