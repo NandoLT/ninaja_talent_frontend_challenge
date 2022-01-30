@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -31,6 +32,12 @@ const UserDetail = ({ seeUserDetail, handleUserDetail, userDetail }) => {
             </div>
         </div>
     );
+}
+
+UserDetail.propTypes = {
+    seeUserDetail: PropTypes.bool.isRequired,
+    handleUserDetail: PropTypes.func.isRequired,
+    userDetail: PropTypes.object.isRequired
 }
 
 export default UserDetail;

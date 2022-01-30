@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import UserDetail from './UserDetail';
 import PropTypes from 'prop-types';
 
@@ -11,11 +11,6 @@ import '../../assets/css/usersList.css';
 const UsersList= ({ users }) => {
     const [seeUserDetail, setSeeUserDetail] = useState(false);
     const [userDetail, setUserDetail] = useState({});
-
-
-    useEffect(() => {
-        console.log('USERS', users);
-    })
 
     const handleUserDetail = () => {
         setSeeUserDetail(!seeUserDetail);
