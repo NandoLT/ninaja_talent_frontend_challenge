@@ -4,14 +4,6 @@ import { getUsers } from '../../services/api/users/usersData';
 import UsersList from './UsersList';
 import Loader from '../commons/Loader';
 
-// const EmptyList = () => {
-//     return (
-//         <div style={{ textAlign: 'center' }}>
-//             <p>Users List Empty !!!</p>
-//         </div>
-//     )
-// }
-
 const  UsersPage = () => {
 
     let initialState = [];
@@ -48,10 +40,3 @@ const  UsersPage = () => {
 }
 
 export default UsersPage;
-
-// isLoading ? 
-//                     <Loader />
-//                     :
-//                         users.length ?
-//                             <UsersList users={ users } /> :
-//                             <EmptyList />
